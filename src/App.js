@@ -5,18 +5,18 @@ function App() {
   return (
     <div className="App">
       <Info />
-      <AddItem />
+      <AddItem text='default' number={2}/>
+      <AddItem text='another default' number={2}/>
     </div>
   );
 }
 
-function AddItem() {
-  const value = "default";
+function AddItem(props) {
 
   return (
     <form>
       <label for="text-form">Type something: </label>
-      <input type="text" value={value} id="text-form" />
+      <input type="text" value={props.text} id="text-form" />
     </form>
   );
 }
